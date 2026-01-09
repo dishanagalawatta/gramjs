@@ -59,15 +59,19 @@
     "async-mutex": "^0.3.0",
     "big-integer": "^1.6.48",
     "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
     "htmlparser2": "^6.1.0",
     "mime": "^3.0.0",
+    "node-localstorage": "^2.2.1",
     "pako": "^2.0.3",
     "path-browserify": "^1.0.1",
     "real-cancellable-promise": "^1.1.1",
+    "socks": "^2.6.2",
     "store2": "^2.13.0",
+    "stream-browserify": "^3.0.0",
+    "timers-browserify": "^2.0.12",
     "ts-custom-error": "^3.2.0",
-    "websocket": "^1.0.34",
-    "node-localstorage": "^2.2.1",
-    "socks": "^2.6.2"
+    "vm-browserify": "^1.1.2",
+    "websocket": "^1.0.34"
   }
 }

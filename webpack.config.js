@@ -25,16 +25,21 @@ module.exports = {
       fs: false,
       path: require.resolve("path-browserify"),
       net: false,
-      crypto: false,
+      crypto: require.resolve("crypto-browserify"),
       os: require.resolve("os-browserify/browser"),
       util: require.resolve("util/"),
       assert: false,
-      stream: false,
+      stream: require.resolve("stream-browserify"),
       events: false,
       constants: false,
+      vm: require.resolve("vm-browserify"),
+      timers: require.resolve("timers-browserify"),
     },
   },
-  mode: process.env.NODE_ENV ?? "development",
+  mode: "production",
+  optimization: {
+    minimize: false,
+  },
   plugins: [
     new webpack.ProvidePlugin({
       Buffer: ["buffer", "Buffer"],
@@ -48,5 +53,6 @@ module.exports = {
     libraryTarget: "umd",
     filename: "telegram.js",
     path: path.resolve(__dirname, "browser"),
+    globalObject: "this",
   },
 };
